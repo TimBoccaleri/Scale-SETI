@@ -1,0 +1,42 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+~$*
+*.tmp
+*.bak
+
+# Local Python environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local secrets and private working material
+.env
+.env.*
+!.env.example
+private/
+review/private/
+local-data/
+
+# Rebuilt distribution packages and scratch space
+/dist/
+/build/
+/staging/
+
+# Do not broadly ignore PDF, DOCX, CSV, JSON, ZIP or engineering assets.
+# Include current source material deliberately after reviewing provenance.
+
+# Local source backups and dry-run outputs
+/local-originals/
+phase1/local-output/
+
+# Internal administration must remain local even if copied back to old paths.
+/review/Scale-SETI_Reviewer_Targets_v0.1.md
+/review/Scale-SETI_Reviewer_Invitation_Email.txt
+/docs/IMPORT_LEDGER.csv

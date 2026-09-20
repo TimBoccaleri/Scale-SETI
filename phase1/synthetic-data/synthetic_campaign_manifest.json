@@ -1,0 +1,24 @@
+{
+  "campaign_id": "SYN-COMMISSION-001",
+  "package_version": "0.3",
+  "apparatus_id": "SIM-APP-001",
+  "created_utc": "2026-09-19T14:55:00Z",
+  "hardware_manifest_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "software_manifest_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+  "trial_count": 100,
+  "condition_counts": {
+    "BLOCKED": 25,
+    "PASSIVE": 25,
+    "POSITIVE": 25,
+    "SHAM": 25
+  },
+  "preregistered_windows_ms": [
+    10,
+    100,
+    1000,
+    10000,
+    100000
+  ],
+  "primary_metric": "hamming_distance",
+  "primary_alpha": 0.001
+}

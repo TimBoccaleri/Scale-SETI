@@ -1,0 +1,15 @@
+Channel,Name,Source,Nominal_Range,Minimum_Rate,Role
+AI0,RX_EXCITATION,Waveform excitation monitor,Sensor-specific,20000,Excitation reference
+AI1,RX_CELL,Conductometric flow cell,Sensor-specific,20000,Primary receiver
+AI2,TEMP_IF,Interface temperature,Sensor-specific,10,Thermal telemetry
+AI3,VIB_IF,Vibration sensor,+/-5 V,5000,Mechanical leakage telemetry
+AI4,EM_IF,EM probe,+/-5 V,100000,EM leakage telemetry
+AI5,ACOUSTIC_IF,Acoustic sensor,+/-5 V,48000,Acoustic leakage telemetry
+AI6,OPTICAL_IF,Optical sensor,0-5 V,1000,Optical leakage telemetry
+AI7,POWER_MON,Isolated power monitor,+/-5 V,5000,Power leakage telemetry
+AI8,FLOW_PRESS,Flow/pressure sensor,0-5 V,1000,Fluidic telemetry
+AI9,REF_DUMMY,Dummy RC receiver,+/-1 V,20000,Common-mode/pipeline control
+DI0,TRIAL_ARM,Trial marker,TTL,Event,Trial state
+DI1,TX_ACTIVE,TX envelope marker,TTL,Event,Physical timing only
+DI2,CLOSE_MARK,Capture close marker,TTL,Event,Scoring boundary
+DO0,LOCAL_TEST,DAQ loopback calibration,TTL,Event,Calibration only

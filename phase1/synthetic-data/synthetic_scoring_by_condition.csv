@@ -1,0 +1,5 @@
+condition_code,trials,mean_hamming,median_hamming,exact_matches,mean_bit_accuracy,mean_correlation,telemetry_flags
+BLOCKED,25,65.16,64.0,0,0.49093739999999997,-0.0179572,1
+PASSIVE,25,64.72,65.0,0,0.49437512,0.037868,2
+POSITIVE,25,0.68,0.0,16,0.9946875199999999,0.9583647999999999,2
+SHAM,25,64.36,64.0,0,0.49718740000000006,-0.0081756,1

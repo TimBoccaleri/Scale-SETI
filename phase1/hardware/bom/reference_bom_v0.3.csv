@@ -1,0 +1,25 @@
+Item_ID,Category,Reference_Candidate,Qty,Function,Required_or_Equivalent,Notes
+BOM-001,Flow control,Elveflow OB1 MK4 2-channel,1,Pressure-driven fluid control,Equivalent allowed,"Reference supports software control, sensor integration, TTL triggering"
+BOM-002,Fluid selection,Elveflow MUX Distribution 12/1,1,Switch L/H/sham fluids,Equivalent allowed,"Low internal volume selector valve"
+BOM-003,Reservoir,Pressure-compatible 15-50 mL reservoir,3,Low/high/sham solutions,Equivalent allowed,Document wetted materials
+BOM-004,Tubing,PEEK/PTFE 1/16 in OD ~0.5 mm ID,2 m,Fluid path,Equivalent allowed,Freeze actual ID and lengths in manifest
+BOM-005,Fittings,1/4-28 microfluidic fittings,Assorted,Fluid connections,Equivalent allowed,Match valve and tubing
+BOM-006,Receiver cell,Custom PEEK flow cell with Pt electrodes,2,Conductometric receiver + spare,Reference design,Fabrication drawing required before A0
+BOM-007,Electrodes,Platinum wire/electrodes,4,Conductivity sensing,Equivalent allowed,Record diameter/purity/lot
+BOM-008,Waveform generator,Keysight 33500B family,1,1 kHz AC excitation,Equivalent allowed,16-bit AWG reference class
+BOM-009,Precision resistor,100 kOhm 0.1% low-tempco,4,Current limiting/reference,Required characteristic,Measure actual value before campaign
+BOM-010,DAQ,NI USB-6363 BNC,1,Receiver and telemetry acquisition,Equivalent allowed,"16-bit, 2 MS/s aggregate reference"
+BOM-011,Buffer amplifier,High input impedance low-noise buffer,2,Cell/excitation monitor buffering,Equivalent allowed,Final part after CAL-02 prototype
+BOM-012,Dummy network,Precision RC network,1,Dummy receiver control,Reference design,Tuned to approximate receiver impedance envelope
+BOM-013,Temperature sensor,Calibrated RTD/thermistor transmitter,1,Interface temperature,Equivalent allowed,10 S/s sufficient
+BOM-014,Vibration sensor,Analog accelerometer,1,Mechanical leakage telemetry,Equivalent allowed,>=5 kS/s acquisition
+BOM-015,EM sensor,Near-field/EM envelope probe,1,EM leakage telemetry,Equivalent allowed,Document bandwidth
+BOM-016,Acoustic sensor,Measurement microphone/preamp,1,Acoustic leakage telemetry,Equivalent allowed,48 kS/s target
+BOM-017,Optical sensor,Photodiode/light sensor,1,Optical leakage telemetry,Equivalent allowed,Place inside receiver enclosure
+BOM-018,Power monitor,Isolated voltage/current monitor,1,Shared-power telemetry,Equivalent allowed,Must not create bridge
+BOM-019,Flow/pressure sensor,Elveflow MFS/MPS or equivalent,1,Fluid-state telemetry,Equivalent allowed,Match 200 uL/min range
+BOM-020,Challenge host,Offline workstation,1,Challenge authority,Required role,No route to DAQ network
+BOM-021,TX host,Offline/local workstation,1,TX orchestration,Required role,No route to DAQ/analysis subnet
+BOM-022,DAQ host,Dedicated workstation,1,Raw capture,Required role,No challenge store access
+BOM-023,Archive storage,Write-protected/append-only storage,1,Immutable artifacts,Equivalent allowed,Technology to be finalized before A5
+BOM-024,QRNG,Hardware QRNG or validated CSPRNG during development,1,Fresh challenge generation,Equivalent allowed,Confirmatory campaign should use independently auditable entropy source

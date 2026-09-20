@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the specific Scale-SETI document and version used. This local collection has no public DOI yet."
+type: dataset
+repository-code: https://github.com/TimBoccaleri/Scale-SETI
+title: "Scale-SETI research and engineering collection"
+authors:
+  - family-names: Boccaleri
+    given-names: Tim
+abstract: "Concept Paper Candidate 1.0, Phase-1 Design Package v0.3, Project Roadmap v1.1, and External Technical Review materials v0.1."
+keywords:
+  - Scale-SETI
+  - experimental methodology
+  - molecular communication
+# Author verified against the supplied concept paper and roadmap.
+# This metadata describes the collection, not measured experimental results.
+# Add collection version, DOI, license and release date when assigned.

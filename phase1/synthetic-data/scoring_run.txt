@@ -1,0 +1,8 @@
+{
+  "trial_count": 100,
+  "positive_mean_bit_accuracy": 0.9946875199999999,
+  "positive_exact_matches": 16,
+  "control_mean_bit_accuracy": 0.49416664,
+  "control_exact_matches": 0,
+  "sanity_pass": true
+}

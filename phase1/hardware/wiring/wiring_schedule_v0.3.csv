@@ -1,0 +1,21 @@
+ID,Source,Destination,Signal,Medium,Isolation_or_Note
+E-001,AWG CH1,100 kOhm series resistor,1 kHz 100 mVpp excitation,50 Ohm BNC coax,Intentional receiver excitation
+E-002,Series resistor output,Pt electrode 1,AC excitation,Shielded lead,Shortest practical run
+E-003,Pt electrode 2,AWG return/reference,AC return,Shielded return,Grounding per frozen plan
+E-004,Excitation monitor,DAQ AI0,Reference waveform,BNC,High-impedance monitor
+E-005,Cell monitor,DAQ AI1,Receiver waveform,BNC via buffer,No clipping; no challenge metadata
+E-006,Dummy RC network,DAQ AI9,Dummy receiver waveform,BNC,Electrically similar control
+E-007,Challenge authority,TX host,Sealed challenge receipt,Signed removable media/controlled local link,No Zone-C route
+E-008,TX host,Pressure controller,Flow schedule,USB/serial,Zone A only
+E-009,TX host,Selector valve,Valve state,Vendor interface,Zone A only
+E-010,DAQ timing,DAQ DI0,ARM marker,TTL,No challenge content
+E-011,TX envelope,DAQ DI1,TX ACTIVE marker,TTL,Envelope only; no bit/symbol content
+E-012,Close controller,DAQ DI2,CLOSE marker,TTL,Scoring boundary
+E-013,Temperature sensor,DAQ AI2,Temperature analog,Shielded pair,Telemetry
+E-014,Vibration sensor,DAQ AI3,Vibration analog,Shielded pair,Telemetry
+E-015,EM probe,DAQ AI4,EM analog,Coax,Telemetry
+E-016,Acoustic sensor,DAQ AI5,Acoustic analog,Shielded pair,Telemetry
+E-017,Optical sensor,DAQ AI6,Optical analog,Shielded pair,Telemetry
+E-018,Power monitor,DAQ AI7,Power analog,Isolated analog,Must not bridge grounds
+E-019,Flow/pressure sensor,DAQ AI8,Fluid-state analog,Shielded pair,Telemetry
+E-020,DAQ host,Archive,Sealed artifact bundle,Dedicated storage link,Post-CLOSE controlled write

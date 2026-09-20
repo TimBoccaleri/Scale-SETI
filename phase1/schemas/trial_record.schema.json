@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scale-seti.example/schema/trial-record-v0.3.json",
+  "title": "Scale-SETI Phase-1 Trial Record v0.3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "trial_id",
+    "campaign_id",
+    "protocol_version",
+    "condition_code",
+    "challenge_commitment",
+    "t_arm_utc",
+    "t_close_utc",
+    "raw_receiver_sha256",
+    "telemetry_sha256",
+    "score_status"
+  ],
+  "properties": {
+    "trial_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "campaign_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "protocol_version": {
+      "const": "0.3"
+    },
+    "condition_code": {
+      "enum": [
+        "POSITIVE",
+        "BLOCKED",
+        "SHAM",
+        "PASSIVE"
+      ]
+    },
+    "hardware_config_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "software_config_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "challenge_commitment": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "challenge_bits": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[01]{128}$"
+    },
+    "expected_response": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[01]{128}$"
+    },
+    "decoded_response": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[01]{128}$"
+    },
+    "hamming_distance": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 128
+    },
+    "t_arm_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "t_tx_start_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "t_tx_end_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "t_close_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "raw_receiver_uri": {
+      "type": "string"
+    },
+    "raw_receiver_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "telemetry_uri": {
+      "type": "string"
+    },
+    "telemetry_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "score_status": {
+      "enum": [
+        "SEALED",
+        "SCORED",
+        "REVIEWED"
+      ]
+    },
+    "analysis_build_hash": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

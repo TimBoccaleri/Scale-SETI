@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scale-SETI Calibration Record v0.3",
+  "type": "object",
+  "required": [
+    "cal_id",
+    "apparatus_id",
+    "procedure_id",
+    "started_utc",
+    "completed_utc",
+    "result",
+    "operator"
+  ],
+  "properties": {
+    "cal_id": {
+      "type": "string"
+    },
+    "apparatus_id": {
+      "type": "string"
+    },
+    "procedure_id": {
+      "enum": [
+        "CAL-01",
+        "CAL-02",
+        "CAL-03",
+        "CAL-04",
+        "CAL-05",
+        "CAL-06",
+        "CAL-07"
+      ]
+    },
+    "started_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "CONDITIONAL"
+      ]
+    },
+    "operator": {
+      "type": "string"
+    },
+    "artifact_hashes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

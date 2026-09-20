@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Scale-SETI Campaign Manifest v0.3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "campaign_id",
+    "package_version",
+    "apparatus_id",
+    "created_utc",
+    "hardware_manifest_hash",
+    "software_manifest_hash",
+    "trial_count",
+    "condition_counts",
+    "preregistered_windows_ms"
+  ],
+  "properties": {
+    "campaign_id": {
+      "type": "string"
+    },
+    "package_version": {
+      "const": "0.3"
+    },
+    "apparatus_id": {
+      "type": "string"
+    },
+    "created_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "hardware_manifest_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "software_manifest_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "trial_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "condition_counts": {
+      "type": "object"
+    },
+    "preregistered_windows_ms": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "primary_metric": {
+      "type": "string"
+    },
+    "primary_alpha": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "exclusiveMaximum": 1
+    }
+  }
+}
